@@ -1,2 +1,3 @@
 # block email ad
 0.0.0.0 thriftykilts.com
+0.0.0.0 eddiebauer.com
