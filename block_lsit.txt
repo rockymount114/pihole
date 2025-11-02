@@ -1,4 +1,4 @@
-# block email ad
+# Personal collection of blocking domain for email ad
 0.0.0.0 thriftykilts.com
 0.0.0.0 eddiebauer.com
 0.0.0.0 mediationandtraining.org
