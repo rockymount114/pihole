@@ -1,1 +1,1 @@
-# pihole
+# pihole ad block list
