@@ -10,4 +10,5 @@
 0.0.0.0 domytermpapers.com
 0.0.0.0 internethealthcoverage.com
 0.0.0.0 findanybusiness.com
+0.0.0.0 buyviagara.com
 
