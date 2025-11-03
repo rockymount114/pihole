@@ -7,3 +7,5 @@
 0.0.0.0 genghikat.com
 0.0.0.0 adeliawedding.com
 0.0.0.0 occamssolutions.com.au
+0.0.0.0 domytermpapers.com
+0.0.0.0 internethealthcoverage.com
