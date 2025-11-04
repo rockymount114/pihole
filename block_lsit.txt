@@ -12,4 +12,5 @@
 0.0.0.0 findanybusiness.com
 0.0.0.0 buyviagara.com
 0.0.0.0 lightenupstudio.com
+0.0.0.0 compass-group.fr
 
