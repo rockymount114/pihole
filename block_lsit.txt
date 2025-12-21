@@ -33,4 +33,5 @@
 0.0.0.0 mykidzu.com
 0.0.0.0 yorkproperties.com
 0.0.0.0 www.mommesilk.com
+0.0.0.0 wswebpic1.com
 
