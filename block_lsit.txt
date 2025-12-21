@@ -32,7 +32,9 @@
 0.0.0.0 s4forum.com
 0.0.0.0 mykidzu.com
 0.0.0.0 yorkproperties.com
-0.0.0.0 www.mommesilk.com
+0.0.0.0 mommesilk.com
 0.0.0.0 wswebpic1.com
 0.0.0.0 asu.edu
+0.0.0.0 ymtc888.com
+0.0.0.0 wswebpic1.com
 
