@@ -7,3 +7,4 @@ cash back
 offer
 credit card
 fortiva
+payment-notification
