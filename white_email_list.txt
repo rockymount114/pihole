@@ -19,3 +19,4 @@ netflix.com
 spotify.com
 twitter.com
 youtube.com
+msn.com
