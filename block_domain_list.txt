@@ -24,3 +24,5 @@ finra.org
 tiktok.com
 sipc.org
 sec.gov
+delta.com
+aka.ms
