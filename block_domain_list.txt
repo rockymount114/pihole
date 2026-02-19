@@ -27,3 +27,5 @@ sec.gov
 delta.com
 aka.ms
 memberportal.com
+g.co
+chatgpt.com
