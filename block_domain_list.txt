@@ -17,3 +17,8 @@ memberportal.com
 gov.uk
 awstrack.me
 ehealthscreenings.com
+discover.com
+trustpilot.com
+iterable.com
+emlcdn.net
+mybuilder.com
