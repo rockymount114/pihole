@@ -22,3 +22,5 @@ trustpilot.com
 iterable.com
 emlcdn.net
 mybuilder.com
+plex.tv
+cloudfront.net
