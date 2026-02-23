@@ -36,3 +36,6 @@ samsclub.com
 uber.com
 sng.link
 myjobquote.co.uk
+amazonaws.com
+braze-images.com
+intuit.com
