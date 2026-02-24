@@ -50,3 +50,5 @@ dd.dhobhimart.com
 farecompare.com
 returnpath.net
 hsbc.co.uk
+homedepot.com
+schema.org
