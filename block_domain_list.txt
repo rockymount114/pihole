@@ -55,3 +55,4 @@ schema.org
 substackcdn.com
 substack.com
 bytebytego.com
+capitalone.com
