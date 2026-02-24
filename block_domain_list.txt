@@ -52,3 +52,6 @@ returnpath.net
 hsbc.co.uk
 homedepot.com
 schema.org
+substackcdn.com
+substack.com
+bytebytego.com
