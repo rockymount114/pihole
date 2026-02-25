@@ -20,7 +20,6 @@ spotify.com
 twitter.com
 youtube.com
 msn.com
-mariginthemix.com
 empowermyretirement.com
 cummins.com
 ssa.gov
@@ -30,12 +29,4 @@ webull.com
 webullfinance.com
 labcorpservicemessage.com
 info.n8n.io
-farecompare.com
-jackery.com
-sendtax.hrblock.com
-surveymonkeyuser.com
-myjobquote.co.uk
-info.lebara.co.uk
-sayweee.com
-worldsim.com
-hello.blink.com
+hrblock.com
