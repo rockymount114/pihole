@@ -33,3 +33,6 @@ info.n8n.io
 hrblock.com
 myjobquote.co.uk
 jackery.com
+farecompare.com
+bassforecast.com
+m.learn.coursera.org
