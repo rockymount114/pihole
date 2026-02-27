@@ -39,3 +39,4 @@ m.learn.coursera.org
 directauto.com
 ollama.com
 sendtax.hrblock.com
+newsletter.trip.com
