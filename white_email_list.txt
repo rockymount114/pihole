@@ -37,3 +37,4 @@ farecompare.com
 bassforecast.com
 m.learn.coursera.org
 directauto.com
+ollama.com
