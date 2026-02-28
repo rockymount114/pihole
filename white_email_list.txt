@@ -40,3 +40,4 @@ directauto.com
 ollama.com
 sendtax.hrblock.com
 newsletter.trip.com
+worldsim.com
