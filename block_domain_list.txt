@@ -71,3 +71,6 @@ namecheap.com
 static-fb.com
 flyingblue.com
 mega.nz
+goopics.net
+tripcdn.com
+trip.com
