@@ -88,3 +88,6 @@ google.com
 spotify.com
 n8n.io
 customeriomail.com
+countdownmail.com
+jackery.com
+klclick1.com
