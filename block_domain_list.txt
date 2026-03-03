@@ -90,3 +90,7 @@ customeriomail.com
 countdownmail.com
 jackery.com
 klclick1.com
+supabase.co
+pstmrk.it
+supabase.com
+medallia.com
