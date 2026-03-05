@@ -109,3 +109,5 @@ adobe.com
 webullfinance.com
 facebook.com
 strava.com
+webengage.com
+simplilearnmailer.com
