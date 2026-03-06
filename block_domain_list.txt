@@ -120,3 +120,6 @@ halifax.co.uk
 lloydsbanking.com
 redd.it
 bulbstone.com
+github.com
+githubusercontent.com
+githubapp.com
