@@ -141,3 +141,5 @@ lifastudio.com
 mcusercontent.com
 mandrillapp.com
 rackcdn.com
+watchterm.com
+mailinblue.com
