@@ -144,3 +144,6 @@ rackcdn.com
 watchterm.com
 mailinblue.com
 roadtrippers.com
+blink.com
+media-amazon.com
+amazon.co.uk
