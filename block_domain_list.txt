@@ -160,3 +160,6 @@ microsoftpersonalcontent.com
 microsoft.com
 ba.com
 kfc.com
+imicampaign.io
+imicampaign.eu
+webexcampaign.uk
