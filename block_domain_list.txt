@@ -164,3 +164,6 @@ imicampaign.io
 imicampaign.eu
 webexcampaign.uk
 brightspeed.com
+teachablecdn.com
+oxfordlearninglab.com
+teachable.com
