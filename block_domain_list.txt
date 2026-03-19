@@ -167,3 +167,7 @@ brightspeed.com
 teachablecdn.com
 oxfordlearninglab.com
 teachable.com
+alpaca.markets
+theocc.com
+vercel.com
+knoclick.com
