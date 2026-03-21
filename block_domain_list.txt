@@ -172,3 +172,5 @@ theocc.com
 vercel.com
 knoclick.com
 starlink.com
+temu.com
+kwcdn.com
