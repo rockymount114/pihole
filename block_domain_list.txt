@@ -177,3 +177,6 @@ kwcdn.com
 amoozeshonline.org
 googleapis.com
 dripship.net
+app.link
+appboy-images.com
+popeyes.com
