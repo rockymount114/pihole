@@ -182,3 +182,5 @@ appboy-images.com
 popeyes.com
 hrtechprivacy.com
 glassdoor.com
+acuityscheduling.com
+sendgrid.net
