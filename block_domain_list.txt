@@ -200,3 +200,7 @@ fragomen.net
 state.gov
 fragomen.com
 geeksforgeeks.org
+ig.com
+intercom-attachments.eu
+wa.me
+intercom-mail.eu
