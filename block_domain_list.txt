@@ -204,3 +204,7 @@ ig.com
 intercom-attachments.eu
 wa.me
 intercom-mail.eu
+discord.gg
+t.me
+windscribe.com
+reddit.com
