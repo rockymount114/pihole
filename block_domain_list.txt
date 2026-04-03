@@ -211,3 +211,5 @@ reddit.com
 spmailtechnol.com
 hipcamp.com
 fincen.gov
+list-manage.com
+mailchimp.com
