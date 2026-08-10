@@ -36,7 +36,6 @@ Key fixes:
 services:
   pihole:
     container_name: pihole
-    hostname: pihole
     image: pihole/pihole:latest
     restart: unless-stopped
     ports:
@@ -50,6 +49,7 @@ services:
       FTLCONF_webserver_domain: 'pihole.aibadminton.com'
       FTLCONF_dns_listeningMode: 'all'
       FTLCONF_dns_upstreams: '172.26.0.3#53'
+      FTLCONF_dns_replyWhenBusy: 'allow'
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
@@ -64,21 +64,17 @@ services:
 
   unbound:
     container_name: unbound
-    hostname: unbound
-    image: klutchell/unbound:latest
+    image: mvance/unbound-rpi:latest
     restart: unless-stopped
-    volumes:
-      - ./unbound/unbound.conf:/opt/unbound/etc/unbound/unbound.conf:ro
-      - ./unbound/root.hints:/opt/unbound/etc/unbound/root.hints:ro
+    healthcheck:
+      test: ["CMD", "dig", "@172.26.0.3", "google.com", "+short"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     networks:
       pihole_net:
         ipv4_address: 172.26.0.3
-    healthcheck:
-      test: ["CMD", "drill", "google.com", "@127.0.0.1"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
 
 networks:
   pihole_net:
@@ -87,6 +83,7 @@ networks:
       config:
         - subnet: 172.26.0.0/24
           gateway: 172.26.0.1
+
 ```
 
 ### 2.2 `.env`
