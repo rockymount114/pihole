@@ -66,12 +66,6 @@ services:
     container_name: unbound
     image: mvance/unbound-rpi:latest
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "dig", "@172.26.0.3", "google.com", "+short"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
     networks:
       pihole_net:
         ipv4_address: 172.26.0.3
