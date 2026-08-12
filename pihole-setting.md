@@ -1,36 +1,33 @@
 # Pi-hole + Unbound on Raspberry Pi 5 - Complete Reference
 
 > Location: `~/pihole` on `raspberrypi`  
-> Status: **Healthy** as of 2026-08-09  
-> Stack: Pi-hole (filtering) + Unbound (recursive resolver) + Docker + Portainer
+> Status: **Healthy** - Fixed `TCP connection failed while receiving payload length` as of 2026-08-09  
+> Stack: Pi-hole (filtering) + Unbound (recursive resolver) + Docker + Portainer  
+> Image: `mvance/unbound-rpi:latest`
 
 ---
 
 ## 1. Directory Structure
 
 ```
-/home/root/pihole/  (or ~/pihole)
+/home/pi/pihole/  (or ~/pihole)
 ├── .env                      # Pi-hole web password
-├── docker-compose.yml        # MAIN FILE - fixed healthy version
-├── docker-compose.yml.bak    # backup
+├── docker-compose.yml        # MAIN FILE
 ├── etc-pihole/               # Pi-hole persistent data
 ├── etc-dnsmasq.d/            # Custom dnsmasq configs (optional)
-├── etc-unbound/              # OLD - not used anymore, can delete
-└── unbound/                  # ACTIVE unbound config
+└── unbound/                  # ACTIVE unbound config - REQUIRED
     ├── unbound.conf          # Custom unbound config
     └── root.hints            # Root DNS servers list
 ```
 
 ## 2. File Contents (Copy-Paste Ready)
 
-### 2.1 `docker-compose.yml` - FINAL FIXED VERSION
-**Why this version?** Fixes `CONNECTION_ERROR (172.26.0.3#53)` and Portainer `unhealthy`.
+### 2.1 `docker-compose.yml` - FINAL FIXED FOR mvance/unbound-rpi
 
-Key fixes:
-1. Mounts your custom `unbound.conf` and `root.hints`
-2. Uses `CMD` not `CMD-SHELL` (klutchell image has no /bin/sh)
-3. Uses `drill` for healthcheck (busybox image doesn't have dig +short)
-4. `condition: service_started` to avoid 30s wait on boot
+**Fixes:**
+1. `CONNECTION_ERROR (172.26.0.3#53): TCP connection failed while receiving payload length from upstream`
+2. Portainer `unhealthy` - `mvance` image also has no `/bin/sh`, must use `CMD` not `CMD-SHELL`
+3. Adds volumes for custom unbound.conf - without this, mvance default blocks Docker subnet
 
 ```yaml
 services:
@@ -57,7 +54,7 @@ services:
       - NET_ADMIN
     depends_on:
       unbound:
-        condition: service_started
+        condition: service_healthy
     networks:
       pihole_net:
         ipv4_address: 172.26.0.2
@@ -66,9 +63,18 @@ services:
     container_name: unbound
     image: mvance/unbound-rpi:latest
     restart: unless-stopped
+    volumes:
+      - ./unbound/unbound.conf:/opt/unbound/etc/unbound/unbound.conf:ro
+      - ./unbound/root.hints:/opt/unbound/etc/unbound/root.hints:ro
     networks:
       pihole_net:
         ipv4_address: 172.26.0.3
+    healthcheck:
+      test: ["CMD", "drill", "google.com", "@127.0.0.1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
 
 networks:
   pihole_net:
@@ -77,7 +83,6 @@ networks:
       config:
         - subnet: 172.26.0.0/24
           gateway: 172.26.0.1
-
 ```
 
 ### 2.2 `.env`
@@ -86,7 +91,12 @@ networks:
 MYPASSWORD=YourSuperStrongPasswordHere
 ```
 
-### 2.3 `unbound/unbound.conf`
+### 2.3 `unbound/unbound.conf` - FIXES TCP ERROR
+
+The 2 lines that fix `TCP connection failed while receiving payload length`:
+
+* `access-control: 172.26.0.0/24 allow` - allows Pi-hole to query
+* `edns-buffer-size: 1232` + `edns-tcp-keepalive: yes` - fixes TCP close
 
 ```conf
 server:
@@ -98,7 +108,7 @@ server:
     do-udp: yes
     do-tcp: yes
 
-    # Access control - CRITICAL for Docker network
+    # Access control - CRITICAL FOR DOCKER
     access-control: 0.0.0.0/0 deny
     access-control: 127.0.0.0/8 allow
     access-control: 172.26.0.0/24 allow
@@ -117,7 +127,8 @@ server:
     use-caps-for-id: no
 
     # DNSSEC
-    trust-anchor-file: "/etc/unbound/root.key"
+    # For mvance image, root.key is auto-managed, but we keep file ref
+    trust-anchor-file: "/opt/unbound/etc/unbound/root.key"
     val-clean-additional: yes
 
     # Privacy
@@ -143,93 +154,90 @@ server:
     log-queries: no
     log-replies: no
     log-servfail: yes
-
-# Optional: enable for stats
-# remote-control:
-#     control-enable: yes
-#     control-interface: 127.0.0.1
-
-    # No forwarders - we are recursive!
 ```
 
 ### 2.4 `unbound/root.hints`
-Download / update every 6 months:
+
+Update every 6 months:
 
 ```bash
 curl -o ~/pihole/unbound/root.hints https://www.internic.net/domain/named.cache
 ```
 
-## 3. Installation & Management Commands
+## 3. Installation & Management
 
 ### First time setup
+
 ```bash
 cd ~/pihole
-curl -o ./unbound/root.hints https://www.internic.net/domain/named.cache
+mkdir -p unbound
+curl -o unbound/root.hints https://www.internic.net/domain/named.cache
+# create unbound/unbound.conf from above
 docker compose up -d
 ```
 
-### Daily commands
+### Verify fix
+
 ```bash
-# status
+# should show healthy, not unhealthy
+docker inspect unbound --format='{{.State.Health.Status}}'
+
+# should return IP via TCP
+docker exec pihole dig @172.26.0.3 google.com +tcp +short
+
+# should show NO errors
+docker logs pihole --since 24h | grep "172.26.0.3#53" || echo "FIXED - no CONNECTION_ERROR"
+docker logs unbound --tail 20
+```
+
+### Daily commands
+
+```bash
 docker ps
 docker exec pihole pihole status
-docker inspect unbound --format='{{.State.Health.Status}}'  # should be healthy
-
-# logs
 docker logs pihole --tail 100 -f
 docker logs unbound --tail 100 -f
 
-# check if CONNECTION_ERROR is gone
-docker logs pihole --since 24h | grep CONNECTION_ERROR || echo "FIXED - no errors"
-
-# test recursion
-docker exec unbound drill google.com @127.0.0.1
-docker exec pihole dig @172.26.0.3 google.com +tcp
-
-# update root hints + images
+# update
 curl -o ./unbound/root.hints https://www.internic.net/domain/named.cache
 docker compose pull
 docker compose up -d
 ```
 
-### Fix Portainer unhealthy (history)
-Error was: `OCI runtime exec failed: /bin/sh: no such file or directory`
-Reason: `klutchell/unbound` is distroless, no shell. Must use `["CMD", "drill", ...]` not `CMD-SHELL`.
+## 4. Root Cause of Yesterday's Error
 
-## 4. Why Unbound?
+```
+Connection error (172.26.0.3#53): TCP connection failed while receiving payload length from upstream (Connection prematurely closed by remote server)
+```
 
-| Pi-hole alone | Pi-hole + Unbound (your setup) |
+**Cause:** `mvance/unbound-rpi:latest` without custom volume uses default config that:
+1. Does not allow `172.26.0.0/24` - closes TCP from Pi-hole
+2. Has default `edns-buffer-size: 4096` which causes fragmentation over Docker bridge
+
+**Fix:** Mount custom `unbound.conf` with `access-control: 172.26.0.0/24 allow` and `edns-buffer-size: 1232`.
+
+Also `mvance` is distroless like `klutchell` - healthcheck must be `["CMD", "drill", ...]` not `CMD-SHELL` or `/bin/sh` error.
+
+## 5. Why Unbound?
+
+| Pi-hole alone | Pi-hole + Unbound |
 |---|---|
 | Forwards to Cloudflare/Google, they log you | You query root servers directly, no logging |
-| Trusts upstream answer | Validates DNSSEC yourself |
-| Cloudflare can filter/censor | Get true authoritative answer |
-| Cache only in Pi-hole | Double cache, 0 msec for repeat domains |
+| Trusts upstream | Validates DNSSEC yourself |
+| Cloudflare can filter | True authoritative answer |
+| Cache only in Pi-hole | Double cache, 0 msec for repeats |
 
-Trade-off: first query to new domain is ~100ms slower (full recursion). Prefetch fixes this.
-
-## 5. Network Flow
+## 6. Network Flow
 
 ```
-Phone/PC (192.168.x.x)
-  -> Pi-hole 172.26.0.2:53 (blocks ads)
-    -> Unbound 172.26.0.3:53 (recursive)
-      -> Root (.) -> TLD (.com) -> Authoritative (google.com)
-  -> Internet
+Phone/PC -> Pi-hole 172.26.0.2:53 (blocks ads) -> Unbound 172.26.0.3:53 -> Root -> TLD -> Auth -> Internet
 ```
 
-Pi-hole dashboard: http://raspberrypi.local:8080/admin
+Dashboard: http://raspberrypi.local:8080/admin
 
-## 6. Backup
+## 7. Backup
 
 ```bash
 cd ~
 tar -czf pihole-backup-$(date +%F).tar.gz pihole/etc-pihole pihole/unbound pihole/docker-compose.yml pihole/.env
-```
-
-## 7. Cleanup old folder
-
-Your `etc-unbound/` is unused. After confirming new setup works for a week:
-
-```bash
-# rm -rf ~/pihole/etc-unbound/
 ```
