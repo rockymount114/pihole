@@ -1,3 +1,6 @@
+# if have permission issue run this first 
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 param(
     [string]$SourceRoot = "F:\Users\Spencer",
     [string]$DestRoot = "D:\SSD_Backup\Spencer",
