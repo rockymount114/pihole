@@ -1,5 +1,7 @@
 # if have permission issue run this first 
 # Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# or
+# powershell -ExecutionPolicy Bypass -File D:\restore.ps1
 
 param(
     [string]$SourceRoot = "F:\Users\Spencer",
