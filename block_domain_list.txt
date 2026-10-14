@@ -8,8 +8,6 @@ aka.ms
 akamaihd.net
 alpaca.markets
 amazon.co.uk
-amazon.com
-amazonaws.com
 amazsfon.com
 amoozeshonline.org
 amplitude.com
@@ -131,7 +129,6 @@ gabrielephoto.com
 gatesofolympuszeus.xyz
 geeksforgeeks.org
 getvero.com
-github.com
 githubapp.com
 githubusercontent.com
 glassdoor.com
@@ -159,7 +156,6 @@ homedepot.com
 hotpads.com
 hrtechprivacy.com
 hs-sites.com
-hsbc.co.uk
 httpsimage.com
 hubspotemail.net
 hubspotlinks.com
@@ -201,7 +197,6 @@ knoclick.com
 krxd.net
 kwcdn.com
 labcorpmessage.com
-lebara.co.uk
 lecol.cc
 lifastudio.com
 linkedin.com
@@ -227,7 +222,6 @@ medium.com
 mega.nz
 memberportal.com
 metamail.com
-microsoft.com
 microsoftpersonalcontent.com
 middleroughblind.com
 misrosoftonline-p.net
@@ -260,7 +254,6 @@ ollies.us
 ondemand.com
 onedrive.com
 onelink.me
-openai.com
 optimum.com
 optimumemail1.com
 orayimg.com
@@ -357,7 +350,6 @@ thrani.com
 tiktok.com
 toyota.com
 tractorsupply.com
-trading212.com
 tradingview.com
 transavia.com
 transportation.gov
@@ -401,8 +393,6 @@ xtime.com
 ymtc888.com
 yoursoulscompass.com
 youtu.be
-youtube.com
 zendesk.com
-zillow.com
 zillowgroup.com
 zillowstatic.com
