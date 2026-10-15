@@ -107,7 +107,6 @@ everestengagement.com
 exacttarget.com
 example.com
 exct.net
-faa.gov
 facebook.com
 facilitynet.net
 farecompare.com
@@ -325,7 +324,6 @@ spmailtechnol.com
 spotify.com
 starbucks.co.uk
 starlink.com
-state.gov
 static-fb.com
 straker.ai
 strakertranslations.com
@@ -371,7 +369,6 @@ uber.com
 universalproperty.com
 unsplash.com
 urldefense.com
-usa.gov
 vercel.com
 vertumotors.com
 vialoops.com
