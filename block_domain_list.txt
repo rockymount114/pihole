@@ -409,3 +409,6 @@ zendesk.com
 zillow.com
 zillowgroup.com
 zillowstatic.com
+pearson.com
+pearsonvue.com
+aws.training
