@@ -1,3 +1,4 @@
+4at5.net
 aa.com
 acuityscheduling.com
 adobe-campaign.com
@@ -24,6 +25,7 @@ athenahealth.com
 atl-paas.net
 atlassian.com
 avis.com
+aws.training
 awstrack.me
 azureedge.net
 ba.com
@@ -69,6 +71,7 @@ co.in
 conciergeunlocked.com
 connectcdk.com
 connellsgroup.co.uk
+connorstephensonagency.com
 constantcontact.com
 contentstack.io
 countdownmail.com
@@ -157,6 +160,7 @@ hertz.com
 hillmangroup.com
 hipcamp.com
 homedepot.com
+honeywellhome.com
 hotpads.com
 hrtechprivacy.com
 hs-sites.com
@@ -272,6 +276,8 @@ oxfordlearninglab.com
 paddle.com
 patreon.com
 pawboost.com
+pearson.com
+pearsonvue.com
 pinterest.com
 plex.tv
 popeyes.com
@@ -407,12 +413,5 @@ youtu.be
 youtube.com
 zendesk.com
 zillow.com
-home.bargains
 zillowgroup.com
 zillowstatic.com
-pearson.com
-pearsonvue.com
-aws.training
-4at5.net
-honeywellhome.com
-connorstephensonagency.com
