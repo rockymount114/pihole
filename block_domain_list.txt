@@ -415,3 +415,5 @@ zendesk.com
 zillow.com
 zillowgroup.com
 zillowstatic.com
+zoom.us
+accuratecoolingservicesltd.com
