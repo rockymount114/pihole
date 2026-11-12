@@ -10,6 +10,8 @@ aka.ms
 akamaihd.net
 alpaca.markets
 amazon.co.uk
+amazon.com
+amazonaws.com
 amazsfon.com
 amoozeshonline.org
 amplitude.com
@@ -98,6 +100,7 @@ doubleclick.net
 dripship.net
 duetdisplay.com
 duke-energy.app
+duke-energy.com
 eataccniot.com
 ecoflow.com
 ecuhealth.org
@@ -115,11 +118,13 @@ everestengagement.com
 exacttarget.com
 example.com
 exct.net
+faa.gov
 facebook.com
 facilitynet.net
 farecompare.com
 fbcdn.net
 femmheleanawe.com
+fidelity.com
 figurejewel.com
 file.garden
 fincen.gov
@@ -137,6 +142,7 @@ gabrielephoto.com
 gatesofolympuszeus.xyz
 geeksforgeeks.org
 getvero.com
+github.com
 githubapp.com
 githubusercontent.com
 glassdoor.com
@@ -166,6 +172,7 @@ honeywellhome.com
 hotpads.com
 hrtechprivacy.com
 hs-sites.com
+hsbc.co.uk
 httpsimage.com
 hubspotemail.net
 hubspotlinks.com
