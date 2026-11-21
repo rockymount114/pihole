@@ -1,10 +1,11 @@
-mariagraziapanizzi.com
 4at5.net
+897413msn.windows
 aa.com
 accuratecoolingservicesltd.com
 acuityscheduling.com
 adobe-campaign.com
 adobe.com
+adsalecdn.com
 airbnb.co.uk
 airfrance.fr
 aka.ms
@@ -38,6 +39,7 @@ bcis.co.uk
 beehiiv.com
 beehiivstatus.com
 bendinglightdesigns.com
+bitwarden.com
 bk.com
 blink.com
 bloomberg.com
@@ -45,6 +47,7 @@ bloomreach.com
 boatus.com
 boatus.org
 boatusfoundation.org
+bonnymail.co.uk
 bookbabymktg.com
 bosch-diy.com
 boschtools.com
@@ -60,6 +63,8 @@ bytebytego.com
 c.gle
 c3tag.com
 cafeatthemall.com
+camelcamelcamel.com
+camelmart.com
 capitalone.com
 carfax.com
 ccmp.eu
@@ -108,6 +113,7 @@ ecuhealth.org
 edu-lettings.org
 eleadcrm.com
 email-libertymutual.com
+emailimagecdnlsx3.com
 emlcdn.net
 emlfiles4.com
 emltrk.com
@@ -154,6 +160,7 @@ google.com
 googleapis.com
 goopics.net
 goosenetwork.org
+gooutdoorsnorthcarolina.com
 gopro.com
 govdeals.com
 govdelivery.com
@@ -174,6 +181,7 @@ hotpads.com
 hrtechprivacy.com
 hs-sites.com
 hsbc.co.uk
+hsbc.com
 httpsimage.com
 hubspotemail.net
 hubspotlinks.com
@@ -195,6 +203,7 @@ imicampaign.eu
 imicampaign.io
 indama.cl
 info-flyingblue.com
+inmoment.eu
 instagram.com
 installaware.com
 intercom-attachments.eu
@@ -216,6 +225,7 @@ knak.io
 knoclick.com
 krxd.net
 kwcdn.com
+kwik-fit.com
 labcorpmessage.com
 lebara.co.uk
 lecol.cc
@@ -336,6 +346,7 @@ sendibt2.com
 servicenowservices.com
 sfmc-content.com
 shinet.org
+ship7.com
 shopify.com
 simplilearnmailer.com
 sipc.org
@@ -376,6 +387,7 @@ temu.com
 tenplatform.com
 termius.com
 thelocalflower.com
+themodernmilkman.co.uk
 theocc.com
 thrani.com
 tiktok.com
@@ -399,6 +411,7 @@ usa.gov
 vercel.com
 vertumotors.com
 vialoops.com
+visaforchina.cn
 wa.me
 wackyworkz.net
 walmart.com
@@ -413,6 +426,7 @@ weee.pics
 welcomeonlintrckr.com
 wf.com
 whatsapp.com
+wiley.com
 windows.net
 windscribe.com
 wise.com
@@ -424,6 +438,7 @@ wst.tv
 x.com
 xe.com
 xtime.com
+ymailcampaign.com
 ymtc888.com
 yoursoulscompass.com
 youtu.be
@@ -435,19 +450,3 @@ zillowstatic.com
 ziosk.com
 zioskconnect.com
 zoom.us
-themodernmilkman.co.uk
-bonnymail.co.uk
-bitwarden.com
-camelmart.com
-camelcamelcamel.com
-wiley.com
-emailimagecdnlsx3.com
-kwik-fit.com
-gooutdoorsnorthcarolina.com
-897413msn.windows
-ship7.com
-ymailcampaign.com
-adsalecdn.com
-visaforchina.cn
-inmoment.eu
-hsbc.com
