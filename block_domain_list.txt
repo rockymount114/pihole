@@ -12,9 +12,6 @@ airfrance.fr
 aka.ms
 akamaihd.net
 alpaca.markets
-amazon.co.uk
-amazon.com
-amazonaws.com
 amazsfon.com
 amoozeshonline.org
 amplitude.com
@@ -23,7 +20,6 @@ annuitybinder.com
 anycart.com
 app.link
 appboy-images.com
-apple.com
 athena.io
 athenahealth.com
 atl-paas.net
@@ -40,7 +36,6 @@ bcis.co.uk
 beehiiv.com
 beehiivstatus.com
 bendinglightdesigns.com
-bitwarden.com
 bk.com
 blink.com
 bloomberg.com
