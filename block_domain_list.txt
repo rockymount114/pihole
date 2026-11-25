@@ -23,6 +23,7 @@ anycart.com
 app.link
 appboy-images.com
 apple.com
+asctechsystems.com
 athena.io
 athenahealth.com
 atl-paas.net
@@ -102,6 +103,9 @@ digital-delivery.com
 directauto.com
 discord.gg
 discover.com
+dji.com
+djicdn.com
+djiits.com
 dot.gov
 doubleclick.net
 dripship.net
@@ -454,6 +458,3 @@ zillowstatic.com
 ziosk.com
 zioskconnect.com
 zoom.us
-djicdn.com
-djiits.com
-dji.com
