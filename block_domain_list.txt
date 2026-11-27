@@ -459,3 +459,5 @@ ziosk.com
 zioskconnect.com
 zoom.us
 grok.com
+discordapp.com
+discord.com
