@@ -461,3 +461,5 @@ zoom.us
 grok.com
 discordapp.com
 discord.com
+user-subscription.com
+ajcloud.net
